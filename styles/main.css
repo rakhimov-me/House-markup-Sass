@@ -263,6 +263,12 @@ svg * {
   }
 }
 
+@media (width <= 48.06125rem) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
 @media (width > 36.06125rem) {
   .visible-mobile {
     display: none !important;
@@ -275,11 +281,21 @@ svg * {
   }
 }
 
+html.is-lock {
+  overflow: hidden;
+}
+
 body {
   font-size: clamp(0.875rem, 0.8035714286rem + 0.3571428571vw, 1.125rem);
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-family-base);
   color: var(--color-dark);
   background-color: var(--color-light);
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1, .h1,
@@ -367,9 +383,10 @@ button[aria-label]::before {
 
 .header {
   display: flex;
-  column-gap: 20px;
   background-color: var(--color-green-light);
-  position: fixed;
+  position: sticky;
+  z-index: 100;
+  top: 0;
   width: 100%;
 }
 @media (width <= 36.06125rem) {
@@ -398,6 +415,11 @@ button[aria-label]::before {
   }
 }
 @media (width <= 36.06125rem) {
+  .header__container {
+    display: contents;
+  }
+}
+@media (width <= 36.06125rem) {
   .header__container-divider {
     position: absolute !important;
     width: 1px !important;
@@ -409,11 +431,6 @@ button[aria-label]::before {
     clip-path: inset(100%) !important;
     clip: rect(0 0 0 0) !important;
     overflow: hidden !important;
-  }
-}
-@media (width <= 36.06125rem) {
-  .header__container {
-    display: contents;
   }
 }
 .header__container-upper {
@@ -439,8 +456,17 @@ button[aria-label]::before {
 .header__container-menu {
   display: flex;
   align-items: center;
+  font-size: clamp(1.125rem, 1.0892857143rem + 0.1785714286vw, 1.25rem);
   column-gap: 3.75rem;
   flex-grow: 1;
+}
+@media (width <= 36.06125rem) {
+  .header__container-menu {
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
 }
 .header__container-menu-list {
   display: flex;
@@ -448,14 +474,15 @@ button[aria-label]::before {
 }
 @media (width <= 36.06125rem) {
   .header__container-menu-list {
+    height: 40vh;
+    width: 100%;
     flex-direction: column;
     gap: 3.125rem;
-    position: fixed;
-    top: 7.5rem;
-    padding: 1rem;
+    margin-block: 1rem;
+    inset: 0;
     background-color: var(--color-green-light);
     transition-duration: var(--transition-duration);
-    row-gap: 3rem;
+    row-gap: 2rem;
     overflow-y: auto;
   }
   .header__container-menu-list:not(.is-active) {
@@ -471,9 +498,14 @@ button[aria-label]::before {
     overflow: hidden !important;
   }
 }
+.header__container-menu-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (width <= 36.06125rem) {
-  .header__container-menu {
-    justify-content: space-between;
+  .header__container-menu-buttons {
+    width: 100%;
   }
 }
 
@@ -486,6 +518,18 @@ button[aria-label]::before {
   border: none;
   color: var(--color-dark);
 }
+.header__cart-button.is-active {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
 
 .header__cart-button:hover {
   color: var(--color-green);
@@ -494,12 +538,6 @@ button[aria-label]::before {
 .header__cart-button:active {
   color: var(--color-dark);
   background-color: var(--color-green-light);
-}
-
-@media (width > 36.06125rem) {
-  .visible-mobile {
-    display: none;
-  }
 }
 
 .burger-button {
@@ -546,6 +584,135 @@ button[aria-label]::before {
   transition-duration: var(--transition-duration);
 }
 
+:root {
+  /* пробрасываем SCSS-переменную в CSS-custom property */
+  --breakpoint-tablet-s: 576.98px;
+}
+
+.footer {
+  background-color: var(--color-green-light);
+}
+.footer__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: clamp(1.25rem, 1.1964285714rem + 0.2678571429vw, 1.4375rem);
+}
+@media (width <= 71.31125rem) {
+  .footer__inner {
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+}
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (width <= 71.31125rem) {
+  .footer__body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (width <= 36.06125rem) {
+  .footer__body {
+    display: contents;
+  }
+}
+.footer__body-contacts {
+  display: flex;
+  flex-direction: column;
+}
+.footer__extra {
+  display: flex;
+  flex-direction: row;
+  gap: 15.625rem;
+}
+@media (width <= 71.31125rem) {
+  .footer__extra {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+@media (width <= 48.06125rem) {
+  .footer__extra {
+    flex-direction: column;
+    gap: 0.9375rem;
+  }
+}
+@media (width <= 36.06125rem) {
+  .footer__extra {
+    display: contents;
+  }
+}
+.footer__extra-soc1als {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+@media (width <= 48.06125rem) {
+  .footer__extra-soc1als {
+    align-items: center;
+    border-top: 0.0625rem solid var(--color-grey);
+    padding-top: 1.25rem;
+  }
+}
+.footer__extra-soc1als-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1.875rem;
+}
+.footer__extra-soc1als-сopyright {
+  color: var(--color-grey);
+  font-size: 0.75rem;
+}
+.footer__extra-main-link {
+  font-size: clamp(1rem, 0.9285714286rem + 0.3571428571vw, 1.25rem);
+}
+.footer__extra-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 3.75rem;
+}
+@media (width <= 48.06125rem) {
+  .footer__extra-menu {
+    justify-content: space-between;
+  }
+}
+@media (width <= 36.06125rem) {
+  .footer__extra-menu {
+    display: contents;
+  }
+}
+.footer__extra-menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.footer__extra-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.footer__extra-menu-link {
+  color: var(--color-grey);
+  font-size: clamp(1rem, 0.9642857143rem + 0.1785714286vw, 1.125rem);
+}
+
+@media (width <= 36.06125rem) {
+  .footer__columns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 1.875rem 1.25rem;
+    justify-content: center;
+  }
+  .footer__columns-grid .footer__extra-menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+}
 .active {
   color: var(--color-green-active);
 }
@@ -573,10 +740,6 @@ button[aria-label]::before {
 /**
   HERO
  */
-.hero {
-  padding-top: 6.25rem;
-}
-
 .hero-container {
   display: flex;
   align-items: center;

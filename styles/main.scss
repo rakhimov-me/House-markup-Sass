@@ -6,8 +6,16 @@
 @use 'globals';
 @use './blocks/header.scss';
 @use './blocks/burger-button.scss';
+@use './blocks/footer.scss';
 
 
+// header {
+//     display: none !important;
+// }
+
+// .hero, .catalog {
+//     display: none !important;
+// }
 
 .active {
     color: var(--color-green-active);
@@ -38,9 +46,6 @@
 /**
   HERO
  */
-.hero{
-  padding-top: rem(100);
-}
 .hero-container {
     display: flex;
     align-items: center;

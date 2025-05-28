@@ -1,4 +1,6 @@
-import Header from "./Header";
+import Header from "./Header.js";
+import FooterColumnsGrid from "./Footer.js";
 
-alert("Header script loaded successfully!");
+
 new Header();
+new FooterColumnsGrid();

@@ -1,0 +1,134 @@
+@use '../helpers/' as *;
+
+:root {
+  /* пробрасываем SCSS-переменную в CSS-custom property */
+  --breakpoint-tablet-s: #{$tablet-s}px;
+}
+
+.footer {
+    background-color: var(--color-green-light);
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-block: fluid(23, 20);
+
+        @include laptop {
+            flex-direction: column;
+            gap: rem(30);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include laptop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include tablet-s {
+            display: contents;
+        }
+
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__extra {
+        display: flex;
+        flex-direction: row;
+        gap: rem(250);
+
+        @include laptop {
+            justify-content: space-between;
+            gap: 0;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            gap: rem(15);
+        }
+
+        @include tablet-s {
+            display: contents;
+        }
+
+        &-soc1als {
+            display: inline-flex;
+            flex-direction: column;
+            gap: rem(10);
+
+            @include tablet {
+                align-items: center;
+                border-top: rem(1) solid var(--color-grey);
+                padding-top: rem(20);
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: row;
+                gap: rem(30);
+            }
+            &-сopyright {
+                color: var(--color-grey);
+                font-size: rem(12);
+            }
+        }
+        &-main-link {
+            @include fluid-text(20, 16);
+        }
+
+        &-menu {
+            display: flex;
+            flex-direction: row;
+            gap: rem(60);
+
+            @include tablet {
+                justify-content: space-between;
+            }
+
+            @include tablet-s {
+                display: contents;
+            }
+
+            &-column {
+                display: flex;
+                flex-direction: column;
+                gap: rem(6);
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: rem(6);
+            }
+
+            &-link {
+                color: var(--color-grey);
+                @include fluid-text(18, 16);
+            }
+        }
+    }
+}
+
+
+@include tablet-s {
+  .footer__columns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: rem(30) rem(20);
+    justify-content: center;
+  }
+
+  .footer__columns-grid .footer__extra-menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+}

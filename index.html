@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <script src="./scripts/Header.js" type="module" defer></script>
+    <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <header class="header" data-js-header>
@@ -27,7 +27,7 @@
 
             <div class="header__container-divider visible-tablet"></div>
 
-            <div class="header__container-lower">
+            <div class="header__container-lower"> 
                 <nav class="header__container-menu">
                     <ul class="header__container-menu-list header__overlay" data-js-overlay>
                         <li class="header__menu-item">
@@ -40,43 +40,39 @@
                             <a href="/" class="header__menu-link">О нас</a>
                         </li>
                     </ul>
-                    <button
-                        class="header__burger-button burger-button  visible-mobile"
-                        type="button"
-                        aria-label="Открыть меню"
-                        title="Открыть меню"
-                        data-js-header-burger-button
-                    >
-                        <span class="burger-button__line"></span>
-                        <span class="burger-button__line"></span>
-                        <span class="burger-button__line"></span>
-                    </button>
-                    <button 
-                            class="header__cart-button"
+                    <div class="header__container-menu-buttons">
+                        <button
+                            class="header__burger-button burger-button  visible-mobile"
                             type="button"
+                            aria-label="Открыть меню"
+                            title="Открыть меню"
+                            data-js-header-burger-button
                         >
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.25 21.16C8.74 21.16 8.33 20.75 8.33 20.25C8.33 19.74 8.74 19.33 9.25 19.33C9.75 19.33 10.16 19.74 10.16 20.25C10.16 20.75 9.75 21.16 9.25 21.16Z"
-                                    stroke="#352C34" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M19.33 21.16C18.82 21.16 18.41 20.75 18.41 20.25C18.41 19.74 18.82 19.33 19.33 19.33C19.83 19.33 20.25 19.74 20.25 20.25C20.25 20.75 19.83 21.16 19.33 21.16Z"
-                                    stroke="#352C34" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M1.91 1.91H5.58L8.03 14.19C8.12 14.61 8.35 14.99 8.68 15.26C9.02 15.53 9.44 15.67 9.87 15.66H18.78C19.21 15.67 19.63 15.53 19.96 15.26C20.3 14.99 20.53 14.61 20.61 14.19L22.08 6.5H6.49"
-                                    stroke="#352C34" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-                            </svg>
+                            <span class="burger-button__line"></span>
+                            <span class="burger-button__line"></span>
+                            <span class="burger-button__line"></span>
+                        </button>
+                        <button 
+                                class="header__cart-button"
+                                type="button"
+                                data-js-header-cart-button
+                            >
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.25 21.16C8.74 21.16 8.33 20.75 8.33 20.25C8.33 19.74 8.74 19.33 9.25 19.33C9.75 19.33 10.16 19.74 10.16 20.25C10.16 20.75 9.75 21.16 9.25 21.16Z"
+                                        stroke="#352C34" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M19.33 21.16C18.82 21.16 18.41 20.75 18.41 20.25C18.41 19.74 18.82 19.33 19.33 19.33C19.83 19.33 20.25 19.74 20.25 20.25C20.25 20.75 19.83 21.16 19.33 21.16Z"
+                                        stroke="#352C34" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M1.91 1.91H5.58L8.03 14.19C8.12 14.61 8.35 14.99 8.68 15.26C9.02 15.53 9.44 15.67 9.87 15.66H18.78C19.21 15.67 19.63 15.53 19.96 15.26C20.3 14.99 20.53 14.61 20.61 14.19L22.08 6.5H6.49"
+                                        stroke="#352C34" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                                </svg>
 
-        
-                    </button>
+            
+                        </button>
+                    </div>
                 </nav>
             </div>
         </div>
-        
-
-        
-
-
-            
-        
     </header>
 
     <main class="content">
@@ -102,7 +98,6 @@
 
 
         <section class="catalog container">
-
             <div class="tabs-buttons container tabs" data-js-tabs>
                 <h2 class="catalog-navigation-title">Репродукции</h2>
                 <ul class="catalog-navigation-list">
@@ -124,5 +119,123 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__body">
+                <a href="/" class="footer__body-head-logo logo">
+                    <img
+                     class="logo__image"
+                    src="images/logo.svg"
+                    alt="Логотип Ink. House"
+                    width="143" height="35">
+                </a>
+                <div class="footer__body-head-contacts hidden-tablet">
+                    <div class="footer__extra-menu-column">
+                        <a class="footer__body-main-link">+7 (999) 543-54-54</a>
+                        <a href="/" class="footer__extra-menu-link">Мастерская</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="footer__extra">
+                <div class="footer__extra-menu">
+                    <div class="footer__extra-menu-column">
+                        <a class="footer__extra-main-link">Репродукции</a>
+                        <ul class="footer__extra-menu-list">
+                            <li class="footer__extra-menu-item">
+                                <a href="/" class="footer__extra-menu-link">Франция</a>
+                            </li>
+                            <li class="footer__extra-menu-item">
+                                <a href="/" class="footer__extra-menu-link">Германия</a>
+                            </li>
+                            <li class="footer__extra-menu-item">
+                                <a href="/" class="footer__extra-menu-link">Англия</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__extra-menu-column">
+                        <a class="footer__extra-main-link">Новинки</a>
+                        <ul class="footer__extra-menu-list">
+                            <li class="footer__extra-menu-item">
+                                <a href="/" class="footer__extra-menu-link">2025</a>
+                            </li>
+                            <li class="footer__extra-menu-item">
+                                <a href="/" class="footer__extra-menu-link">2024</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__extra-menu-column">
+                        <a class="footer__extra-main-link">О нас</a>
+                        <ul class="footer__extra-menu-list">
+                            <li class="footer__extra-menu-item">
+                                <a href="/" class="footer__extra-menu-link">Художники</a>
+                            </li>
+                            <li class="footer__extra-menu-item">
+                                <a href="/" class="footer__extra-menu-link">Менеджеры</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__extra-soc1als">
+                    <ul class="footer__extra-soc1als-list">
+                        <li class="footer__extra-soc1als-item">
+                            <a 
+                            href="/" 
+                            class="footer__extra-soc1als-link" 
+                            target="_blank"
+                            aria-label="Facebook"
+                            title="Facebook"
+                            >
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs/>
+                                <path d="M12.4 18L12.4 11.03L14.73 11.03L15.08 8.32L12.4 8.32L12.4 6.59C12.4 5.81 12.62 5.27 13.74 5.27L15.17 5.27L15.17 2.85C14.48 2.78 13.78 2.74 13.08 2.75C11.02 2.75 9.6 4.01 9.6 6.33L9.6 8.32L7.26 8.32L7.26 11.03L9.6 11.03L9.6 18L1 18C0.73 18 0.48 17.89 0.29 17.7C0.1 17.51 0 17.26 0 17L0 1C0 0.73 0.1 0.48 0.29 0.29C0.48 0.1 0.73 0 1 0L17 0C17.26 0 17.51 0.1 17.7 0.29C17.89 0.48 18 0.73 18 1L18 17C18 17.26 17.89 17.51 17.7 17.7C17.51 17.89 17.26 18 17 18L12.4 18Z" fill="#2C2D35" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </svg>
+                            </a>
+                        </li>
+                        <li class="footer__extra-soc1als-item">
+                            <a 
+                            href="/" 
+                            class="footer__extra-soc1als-link" 
+                            target="_blank"
+                            aria-label="Instagram"
+                            title="Instagram"
+                            >
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs/>
+                                <path d="M10 0C12.71 0 13.05 0 14.12 0.06C15.18 0.1 15.91 0.27 16.54 0.52C17.2 0.77 17.76 1.12 18.32 1.67C18.83 2.17 19.22 2.78 19.47 3.45C19.72 4.08 19.88 4.81 19.93 5.87C19.98 6.94 20 7.28 20 10C20 12.71 19.99 13.05 19.93 14.12C19.88 15.18 19.72 15.91 19.47 16.54C19.22 17.21 18.83 17.82 18.32 18.32C17.82 18.83 17.21 19.22 16.54 19.47C15.91 19.72 15.18 19.89 14.12 19.93C13.05 19.98 12.71 20 10 20C7.28 20 6.94 19.99 5.87 19.93C4.81 19.89 4.08 19.72 3.44 19.47C2.78 19.22 2.17 18.83 1.67 18.32C1.16 17.82 0.77 17.21 0.52 16.54C0.27 15.91 0.11 15.18 0.06 14.12C0.01 13.05 0 12.71 0 10C0 7.28 0.01 6.94 0.06 5.87C0.11 4.81 0.27 4.08 0.52 3.45C0.77 2.78 1.16 2.17 1.67 1.67C2.17 1.16 2.78 0.77 3.44 0.52C4.08 0.27 4.81 0.1 5.87 0.06C6.94 0.01 7.28 0 10 0ZM10 5C8.67 5 7.4 5.52 6.46 6.46C5.52 7.4 5 8.67 5 10C5 11.32 5.52 12.59 6.46 13.53C7.4 14.47 8.67 15 10 15C11.32 15 12.59 14.47 13.53 13.53C14.47 12.59 15 11.32 15 10C15 8.67 14.47 7.4 13.53 6.46C12.59 5.52 11.32 5 10 5ZM16.5 4.75C16.5 4.41 16.36 4.1 16.13 3.86C15.89 3.63 15.58 3.5 15.25 3.5C14.91 3.5 14.6 3.63 14.36 3.86C14.13 4.1 14 4.41 14 4.75C14 5.08 14.13 5.39 14.36 5.63C14.6 5.86 14.91 6 15.25 6C15.58 6 15.89 5.86 16.13 5.63C16.36 5.39 16.5 5.08 16.5 4.75ZM10 7C10.79 7 11.55 7.31 12.12 7.87C12.68 8.44 13 9.2 13 10C13 10.79 12.68 11.55 12.12 12.12C11.55 12.68 10.79 13 10 13C9.2 13 8.44 12.68 7.87 12.12C7.31 11.55 7 10.79 7 10C7 9.2 7.31 8.44 7.87 7.87C8.44 7.31 9.2 7 10 7Z" fill="#2C2D35" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </svg>
+                            </a>
+                        </li>
+                        <li class="footer__extra-soc1als-item">
+                            <a 
+                            href="/" 
+                            class="footer__extra-soc1als-link" 
+                            target="_blank"
+                            aria-label="YouTube"
+                            title="YouTube"
+                            >
+                            <svg width="24.000000" height="20.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs>
+                                    <clipPath id="clip10_919">
+                                        <rect id="Frame" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                    </clipPath>
+                                </defs>
+                                <rect id="Frame" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#2E2B44" fill-opacity="0"/>
+                                <g clip-path="url(#clip10_919)">
+                                    <path id="Vector" d="M21.54 6.49C22 8.27 22 12 22 12C22 12 22 15.72 21.54 17.5C21.28 18.48 20.54 19.26 19.6 19.52C17.89 20 12 20 12 20C12 20 6.1 20 4.39 19.52C3.44 19.25 2.7 18.48 2.45 17.5C2 15.72 2 12 2 12C2 12 2 8.27 2.45 6.49C2.71 5.51 3.45 4.73 4.39 4.47C6.1 4 12 4 12 4C12 4 17.89 4 19.6 4.47C20.55 4.74 21.29 5.51 21.54 6.49ZM10 15.5L16 12L10 8.5L10 15.5Z" fill="#2C2D35" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                </g>
+                            </svg>
+
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer__extra-soc1als-сopyright">
+                        Ink. House ® <br class="hidden-tablet"> All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

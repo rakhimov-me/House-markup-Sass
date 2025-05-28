@@ -1,17 +1,16 @@
 @use '../helpers/' as *;
 
 
-
 .header {
     display: flex;
-    column-gap: 20px;
     background-color: var(--color-green-light);
-    position: fixed;
+    position: sticky;
+    z-index: 100;
+    top: 0;
     width: 100%;
 
     @include tablet-s {
         flex-direction: column;
-        // inset: 0;
     }
 
     &__container {
@@ -34,6 +33,10 @@
                 background-color: #C3D1C6;
             }
         }
+
+        @include tablet-s {
+            display: contents;
+        }
         
         &-divider {
             @include tablet-s {
@@ -41,10 +44,6 @@
             }
         }
         
-        @include tablet-s {
-            display: contents;
-        }
-
         &-upper {
             display: flex;
             align-items: center;
@@ -70,22 +69,32 @@
         &-menu {
             display: flex;
             align-items: center;
+            @include fluid-text(20, 18);
             column-gap: rem(60);
             flex-grow: 1;
+
+
+            @include tablet-s {
+                justify-content: space-between;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                row-gap: rem(16);
+            }
 
             &-list {
                 display: flex;
                 column-gap: rem(60);
                 
                 @include tablet-s {
+                    height: 40vh;
+                    width: 100%;
                     flex-direction: column;
                     gap: rem(50);
-                    position: fixed;
-                    top: rem(120);
-                    padding: 1rem;
+                    margin-block: 1rem;
+                    inset: 0;
                     background-color: var(--color-green-light);
                     transition-duration: var(--transition-duration);
-                    row-gap: 3rem;
+                    row-gap: 2rem;
                     overflow-y: auto;
 
                     &:not(.is-active) {
@@ -93,9 +102,17 @@
                     }
                 }
             }
-            @include tablet-s {
+
+            &-buttons {
+                display: flex;
                 justify-content: space-between;
+                align-items: center;
+                
+                @include tablet-s {
+                    width: 100%;
+                }
             }
+
         }
     }
 }
@@ -109,6 +126,10 @@
     background-color: transparent;
     border: none;
     color: var(--color-dark);
+
+    &.is-active {
+        @include visually-hidden;
+    }
 }
 
 .header__cart-button:hover {
@@ -120,8 +141,3 @@
     background-color: var(--color-green-light);
 }
 
-.visible-mobile {
-    @include tablet-s-above {
-        display: none;
-    }
-}
