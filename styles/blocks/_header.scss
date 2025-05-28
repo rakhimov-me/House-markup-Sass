@@ -1,0 +1,127 @@
+@use '../helpers/' as *;
+
+
+
+.header {
+    display: flex;
+    column-gap: 20px;
+    background-color: var(--color-green-light);
+    position: fixed;
+    width: 100%;
+
+    @include tablet-s {
+        flex-direction: column;
+        // inset: 0;
+    }
+
+    &__container {
+        margin: 0 auto;
+        padding-block:  rem(30);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1rem;
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(16);
+            padding-block: rem(16);
+
+            &-divider {
+                height: rem(1);
+                width: 95%;
+                background-color: #C3D1C6;
+            }
+        }
+        
+        &-divider {
+            @include tablet-s {
+                @include visually-hidden;
+            }
+        }
+        
+        @include tablet-s {
+            display: contents;
+        }
+
+        &-upper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include tablet-s {
+                padding-block: rem(16);
+                background-color: var(--color-light);
+            }
+
+        }
+
+        &-lower {
+            @include tablet-s {
+                padding-block: rem(16);
+                max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+                width: var(--container-width);
+                padding-inline: var(--container-padding-x);
+                margin-inline: auto;
+            }
+        }
+
+        &-menu {
+            display: flex;
+            align-items: center;
+            column-gap: rem(60);
+            flex-grow: 1;
+
+            &-list {
+                display: flex;
+                column-gap: rem(60);
+                
+                @include tablet-s {
+                    flex-direction: column;
+                    gap: rem(50);
+                    position: fixed;
+                    top: rem(120);
+                    padding: 1rem;
+                    background-color: var(--color-green-light);
+                    transition-duration: var(--transition-duration);
+                    row-gap: 3rem;
+                    overflow-y: auto;
+
+                    &:not(.is-active) {
+                        @include visually-hidden;
+                    }
+                }
+            }
+            @include tablet-s {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+.header__cart-button {
+    position: relative;
+    display: inline-flex;
+    justify-self: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: var(--color-dark);
+}
+
+.header__cart-button:hover {
+    color: var(--color-green);
+}
+
+.header__cart-button:active {
+    color: var(--color-dark);
+    background-color: var(--color-green-light);
+}
+
+.visible-mobile {
+    @include tablet-s-above {
+        display: none;
+    }
+}

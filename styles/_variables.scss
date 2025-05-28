@@ -1,0 +1,41 @@
+@use 'helpers' as *;
+
+:root {
+    --color-light: #F4F6F5;
+    --color-dark: #352C34;
+
+    --color-green: #598D66;
+    --color-green-active: #376B44;
+    --color-green-dark: #1A5533;
+    --color-green-light: #E1EDE6;
+
+    --color-grey: #86928B;
+
+    --color-accent: #EEDB6D;
+
+    --border-radius: 20px;
+
+    --font-family-base: 'Raleway', sans-serif;
+
+    --container-width: #{rem(1110)};
+    --container-padding-x: #{rem(15)};
+    --transition-duration: 0.2s;
+}
+
+@include laptop {
+  :root {
+    --container-width: #{rem(690)};
+  }
+}
+
+@include tablet {
+  :root {
+    --container-width: #{rem(510)};
+  }
+}
+
+@include tablet-s {
+  :root {
+    --container-width: #{rem(300)};
+  }
+}

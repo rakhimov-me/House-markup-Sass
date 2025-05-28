@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/Header.js" type="module" defer></script>
+</head>
+<body>
+    <header class="header" data-js-header>
+        <div class="header__container container">
+            <div class="header__container-upper">
+                <a
+                class="header__logo logo"
+                href="/"
+                title="Home"
+                aria-label="Home"
+                >
+                    <img
+                    class="logo__image"
+                    src="images/logo.svg"
+                    alt="Логотип Ink. House"
+                    width="143" height="35">
+                </a>
+            </div>
+
+            <div class="header__container-divider visible-tablet"></div>
+
+            <div class="header__container-lower">
+                <nav class="header__container-menu">
+                    <ul class="header__container-menu-list header__overlay" data-js-overlay>
+                        <li class="header__menu-item">
+                            <a href="/" class="header__menu-link">Репродукции</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="/" class="header__menu-link">Новинки</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="/" class="header__menu-link">О нас</a>
+                        </li>
+                    </ul>
+                    <button
+                        class="header__burger-button burger-button  visible-mobile"
+                        type="button"
+                        aria-label="Открыть меню"
+                        title="Открыть меню"
+                        data-js-header-burger-button
+                    >
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                    </button>
+                    <button 
+                            class="header__cart-button"
+                            type="button"
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.25 21.16C8.74 21.16 8.33 20.75 8.33 20.25C8.33 19.74 8.74 19.33 9.25 19.33C9.75 19.33 10.16 19.74 10.16 20.25C10.16 20.75 9.75 21.16 9.25 21.16Z"
+                                    stroke="#352C34" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M19.33 21.16C18.82 21.16 18.41 20.75 18.41 20.25C18.41 19.74 18.82 19.33 19.33 19.33C19.83 19.33 20.25 19.74 20.25 20.25C20.25 20.75 19.83 21.16 19.33 21.16Z"
+                                    stroke="#352C34" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M1.91 1.91H5.58L8.03 14.19C8.12 14.61 8.35 14.99 8.68 15.26C9.02 15.53 9.44 15.67 9.87 15.66H18.78C19.21 15.67 19.63 15.53 19.96 15.26C20.3 14.99 20.53 14.61 20.61 14.19L22.08 6.5H6.49"
+                                    stroke="#352C34" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                            </svg>
+
+        
+                    </button>
+                </nav>
+            </div>
+        </div>
+        
+
+        
+
+
+            
+        
+    </header>
+
+    <main class="content">
+        <section class="hero">
+            <div class="hero-container container">
+                <img
+                    class="hero-container-image"
+                    src="images/hero-image.png"
+                    alt="Голубь на ветке"
+                    width="540" height="621" loading="lazy">
+
+                <div class="hero-container-body">
+                    <h1>Реплики картин <br>
+                        от <span class="highlight-green">Ink. House</span>
+                    </h1>
+                    <div class="hero-container-description">
+                        <p>Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
+                    </div>
+                    <button class="button ">Продукция</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="catalog container">
+
+            <div class="tabs-buttons container tabs" data-js-tabs>
+                <h2 class="catalog-navigation-title">Репродукции</h2>
+                <ul class="catalog-navigation-list">
+                    <li class="catalog-navigation-item"><button class="catalog-navigation-button catalog-navigation-button-active">Франция</button></li>
+                    <li class="catalog-navigation-item"><button class="catalog-navigation-button">Германия</button></li>
+                    <li class="catalog-navigation-item"><button class="catalog-navigation-button">Англия</button></li>
+                </ul>
+            </div>
+
+            <div class="catalog-wrap-list">
+                <ul class="catalog-list">
+                    <li class="catalog-item">
+                        <article class="art">
+                            <p class="author"></p>
+                            <h3 class="art-title"> </h3>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
