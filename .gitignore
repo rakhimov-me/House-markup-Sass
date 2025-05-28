@@ -1,31 +1,13 @@
 # Node.js dependencies
 node_modules/
 
-# Environment files
-.env
-.env.local
-.env.*.local
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 # Build outputs
 dist/
 build/
-out/
 
-# IDEs and editors
-.vscode/
-.idea/
+# Sass outputs
+*.css
+*.css.map
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Optional npm cache
-.npm
-
-# Optional eslint cache
-.eslintcache
+# Environment files
+.env
