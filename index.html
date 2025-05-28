@@ -76,46 +76,168 @@
     </header>
 
     <main class="content">
-        <section class="hero">
-            <div class="hero-container container">
+        <section class="hero" areal-labelledby="hero-title">
+            <div class="hero__main container">
                 <img
-                    class="hero-container-image"
+                    class="hero__main-image hidden-tablet-s"
                     src="images/hero-image.png"
                     alt="Голубь на ветке"
                     width="540" height="621" loading="lazy">
 
-                <div class="hero-container-body">
-                    <h1>Реплики картин <br>
-                        от <span class="highlight-green">Ink. House</span>
-                    </h1>
-                    <div class="hero-container-description">
-                        <p>Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
+                <div class="hero__body" id="hero-title">
+                    <div class="hero__main-description">
+                        <h1>Реплики картин <br>
+                            от <span class="highlight-green">Ink. House</span>
+                        </h1>
+                        <p class="description">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
                     </div>
-                    <button class="button ">Продукция</button>
+                    <button class="button">Продукция</button>
                 </div>
             </div>
         </section>
 
 
-        <section class="catalog container">
-            <div class="tabs-buttons container tabs" data-js-tabs>
-                <h2 class="catalog-navigation-title">Репродукции</h2>
-                <ul class="catalog-navigation-list">
-                    <li class="catalog-navigation-item"><button class="catalog-navigation-button catalog-navigation-button-active">Франция</button></li>
-                    <li class="catalog-navigation-item"><button class="catalog-navigation-button">Германия</button></li>
-                    <li class="catalog-navigation-item"><button class="catalog-navigation-button">Англия</button></li>
-                </ul>
-            </div>
-
-            <div class="catalog-wrap-list">
-                <ul class="catalog-list">
-                    <li class="catalog-item">
-                        <article class="art">
-                            <p class="author"></p>
-                            <h3 class="art-title"> </h3>
-                        </article>
-                    </li>
-                </ul>
+        <section class="catalog tabs" data-js-tabs>
+            <header class="tabs__header container">
+                <h2 id="reproduction-category-title">Репродукции</h2>
+                <div 
+                    class="tabs__buttons"
+                    role="tablist"
+                    aria-labelledby="reproduction-category-title"
+                >
+                    <button 
+                        class="tabs__button is-active"
+                        type="button"
+                        id="tab-1"
+                        role="tab"
+                        aria-controls="tabpanel-1"
+                        data-js-tabs-button
+                        aria-selected="true"
+                    >
+                        Франция
+                    </button>
+                    <button 
+                        class="tabs__button"
+                        type="button"
+                        id="tab-2"
+                        role="tab"
+                        aria-controls="tabpanel-2"
+                        data-js-tabs-button
+                        aria-selected="false"
+                        tabindex="-1"
+                    >
+                        Германия
+                    </button>
+                    <button 
+                        class="tabs__button"
+                        type="button"
+                        id="tab-3"
+                        role="tab"
+                        aria-controls="tabpanel-3"
+                        data-js-tabs-button
+                        aria-selected="false"
+                        tabindex="-1"
+                    >
+                        Англия
+                    </button>
+                </div>
+            </header>
+            <div class="tabs__body">
+                <div 
+                    class="tabs__content is-active" 
+                    id="tabpanel-1"
+                    aria-labelledby="tab-1"
+                    tabindex="0"
+                    data-js-tabs-content
+                >
+                    <ul class="tabs__content-list container">
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                    <img
+                                    src="./images/03.jpeg"
+                                    alt="Картина «Охота Амура» Марселя Руссо"
+                                    class="card__image"
+                                    />
+                                </figure>
+                                <header class="card__header">
+                                    <p class="card__author description">Марсель Руссо</p>
+                                    <h3 class="card__title">Охота Амура</h3>
+                                    <p class="card__material">Холст. масло (50×80)</p>
+                                </header>
+                                <div class="card__price">
+                                    <p>14 500 руб</p>
+                                </div>
+                                <footer class="card__footer">
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                            </article>
+                        </li>
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                    <img
+                                    src="./images/03.jpeg"
+                                    alt="Картина «Охота Амура» Марселя Руссо"
+                                    class="card__image"
+                                    />
+                                </figure>
+                                <header class="card__header">
+                                    <p class="card__author description">Марсель Руссо</p>
+                                    <h3 class="card__title">Охота Амура</h3>
+                                    <p class="card__material">Холст. масло (50×80)</p>
+                                </header>
+                                <div class="card__price">
+                                    <p>14 500 руб</p>
+                                </div>
+                                <footer class="card__footer">
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                            </article>
+                        </li>
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                    <img
+                                    src="./images/03.jpeg"
+                                    alt="Картина «Охота Амура» Марселя Руссо"
+                                    class="card__image"
+                                    />
+                                </figure>
+                                <header class="card__header">
+                                    <p class="card__author description">Марсель Руссо</p>
+                                    <h3 class="card__title">Охота Амура</h3>
+                                    <p class="card__material">Холст. масло (50×80)</p>
+                                </header>
+                                <div class="card__price">
+                                    <p>14 500 руб</p>
+                                </div>
+                                <footer class="card__footer">
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                            </article>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div 
+                    class="tabs__content" 
+                    id="tabpanel-2"
+                    aria-labelledby="tab-2"
+                    tabindex="0"
+                    data-js-tabs-content
+                >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, illo quo officiis minus expedita quaerat voluptatibus maiores repudiandae atque, officia quae qui ducimus ex, quos ea similique quibusdam sapiente voluptatem!
+                </div>
+                <div 
+                    class="tabs__content" 
+                    id="tabpanel-3"
+                    aria-labelledby="tab-3"
+                    tabindex="0"
+                    data-js-tabs-content
+                >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, illo quo officiis minus expedita quaerat voluptatibus maiores repudiandae atque, officia quae qui ducimus ex, quos ea similique quibusdam sapiente voluptatem!
+                </div>
             </div>
         </section>
     </main>

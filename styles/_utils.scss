@@ -19,8 +19,8 @@
     }
 }
 
-.hidden-tablet {
-    @include tablet {
+.hidden-tablet-s {
+    @include tablet-s {
         display: none !important;
     }
 }

@@ -1,0 +1,31 @@
+@use '../helpers/' as *;
+
+.catalog {
+
+
+    .tabs {
+    
+        &__header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__content {   
+
+            &-list {
+                display: grid;
+                gap: rem(30);
+                grid-template-columns: repeat(3, 1fr);
+
+                @include laptop {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                @include tablet-s {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    }
+}
+
