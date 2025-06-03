@@ -71,7 +71,7 @@ body,
   чтобы избежать взаимодействие с более сложным селектором
  */
 p {
-  --paragraphMarginBottom: 24px;
+  // --paragraphMarginBottom: 24px; Кажется не нужно (мешает)
 
   margin-block: 0;
 }

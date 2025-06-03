@@ -6,6 +6,16 @@
     width: var(--container-width);
     padding-inline: var(--container-padding-x);
     margin-inline: auto;
+    --offset: max(
+        calc(
+            (100vw
+            - (var(--container-width)
+                + 2 * var(--container-padding-x)
+            )
+            ) / 2
+        ),
+        0px
+    );
 }
 
 
@@ -19,8 +29,8 @@
     }
 }
 
-.hidden-tablet {
-    @include tablet {
+.hidden-tablet-s {
+    @include tablet-s {
         display: none !important;
     }
 }

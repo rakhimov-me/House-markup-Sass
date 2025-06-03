@@ -1,0 +1,22 @@
+@use '../helpers/' as *;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: fluid(20, 15) fluid(60, 30);
+    background-color: transparent;
+    border: rem(1) solid var(--color-green);
+    color: var(--color-green);
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: var(--color-green);
+    color: var(--color-light);
+}
+
+.button:active {
+    background-color: var(--color-green-light);
+    color: var(--color-green);
+}

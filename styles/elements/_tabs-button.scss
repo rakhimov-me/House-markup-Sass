@@ -1,0 +1,26 @@
+@use '../helpers/' as *;
+
+.tabs__button {
+    display: inline-flex;
+    @include fluid-text(20, 18);
+    padding: rem(7) rem(20);
+    background-color: var(--color-green-light);
+    border-radius: var(--border-radius);
+    border: rem(2) solid transparent;
+
+    &.is-active {
+        background-color: var(--color-green-active);
+        color: var(--color-light);
+        pointer-events: none;
+    } 
+
+    &:hover {
+        background-color: var(--color-green);
+        color: var(--color-light);
+    }
+    &:active {
+        background-color: var(--color-green-light);
+        color: var(--color-dark);
+        border: 2px solid var(--color-green);
+    }
+}
