@@ -99,9 +99,9 @@
 
         <section class="catalog tabs" data-js-tabs>
             <header class="tabs__header container">
-                <h2 id="reproduction-category-title">Репродукции</h2>
+                <h2 class="container" id="reproduction-category-title">Репродукции</h2>
                 <div 
-                    class="tabs__buttons"
+                    class="tabs__header-buttons"
                     role="tablist"
                     aria-labelledby="reproduction-category-title"
                 >
@@ -154,70 +154,141 @@
                         <li class="tabs__content-list-item">
                             <article class="card">
                                 <figure class="card__figure">
-                                    <img
-                                    src="./images/03.jpeg"
+                                <img
+                                    src="./images/1.jpeg"
                                     alt="Картина «Охота Амура» Марселя Руссо"
                                     class="card__image"
-                                    />
+                                />
                                 </figure>
-                                <header class="card__header">
-                                    <p class="card__author description">Марсель Руссо</p>
-                                    <h3 class="card__title">Охота Амура</h3>
-                                    <p class="card__material">Холст. масло (50×80)</p>
-                                </header>
-                                <div class="card__price">
-                                    <p>14 500 руб</p>
+                                <div class="card__description">
+                                    <header class="card__description-header">
+                                        <p class="card__description-header-author description">Марсель Руссо</p>
+                                        <h3 class="card__description-header-title">Охота Амура</h3>
+                                        <p class="card__description-headermaterial">Холст. масло (50×80)</p>
+                                    </header>
+                                    <footer class="card__description-footer">
+                                        <p>14 500 руб</p>
+                                        <button class="card__button button">В корзину</button>
+                                    </footer>
                                 </div>
-                                <footer class="card__footer">
-                                    <button class="card__button button">В корзину</button>
-                                </footer>
                             </article>
                         </li>
+
                         <li class="tabs__content-list-item">
                             <article class="card">
                                 <figure class="card__figure">
-                                    <img
-                                    src="./images/03.jpeg"
-                                    alt="Картина «Охота Амура» Марселя Руссо"
+                                <img
+                                    src="./images/2.jpeg"
+                                    alt="Картина «Дама с собачкой» Анри Селин"
                                     class="card__image"
-                                    />
+                                />
                                 </figure>
-                                <header class="card__header">
-                                    <p class="card__author description">Марсель Руссо</p>
-                                    <h3 class="card__title">Охота Амура</h3>
-                                    <p class="card__material">Холст. масло (50×80)</p>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Анри Селин</p>
+                                    <h3 class="card__description-header-title">Дама с собачкой</h3>
+                                    <p class="card__description-headermaterial">Акрил. бумага (бумма)</p>
                                 </header>
-                                <div class="card__price">
-                                    <p>14 500 руб</p>
-                                </div>
-                                <footer class="card__footer">
+                                <footer class="card__description-footer">
+                                    <p>16 500 руб</p>
                                     <button class="card__button button">В корзину</button>
                                 </footer>
+                                </div>
                             </article>
-                        </li>
-                        <li class="tabs__content-list-item">
+                            </li>
+
+                            <li class="tabs__content-list-item">
                             <article class="card">
                                 <figure class="card__figure">
-                                    <img
-                                    src="./images/03.jpeg"
-                                    alt="Картина «Охота Амура» Марселя Руссо"
+                                <img
+                                    src="./images/3.jpeg"
+                                    alt="Картина «Процедура» Франсуа Дюпон"
                                     class="card__image"
-                                    />
+                                />
                                 </figure>
-                                <header class="card__header">
-                                    <p class="card__author description">Марсель Руссо</p>
-                                    <h3 class="card__title">Охота Амура</h3>
-                                    <p class="card__material">Холст. масло (50×80)</p>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Франсуа Дюпон</p>
+                                    <h3 class="card__description-header-title">Процедура</h3>
+                                    <p class="card__description-headermaterial">Цветная литография (40×60)</p>
                                 </header>
-                                <div class="card__price">
-                                    <p>14 500 руб</p>
-                                </div>
-                                <footer class="card__footer">
+                                <footer class="card__description-footer">
+                                    <p>20 000 руб</p>
                                     <button class="card__button button">В корзину</button>
                                 </footer>
+                                </div>
                             </article>
-                        </li>
-                        
+                            </li>
+
+                            <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/4.jpeg"
+                                    alt="Картина «Роза» Луи Детуш"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Луи Детуш</p>
+                                    <h3 class="card__description-header-title">Роза</h3>
+                                    <p class="card__description-headermaterial">Бумага. колер (50×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>12 000 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
+                            <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/5.jpeg"
+                                    alt="Картина «Птичья трапеза» Франсуа Дюпон"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Франсуа Дюпон</p>
+                                    <h3 class="card__description-header-title">Птичья трапеза</h3>
+                                    <p class="card__description-headermaterial">Цветная литография (40×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>22 500 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
+                            <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/6.jpeg"
+                                    alt="Картина «Пейзаж с рыбой» Пьера Морайна"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Пьер Морайн</p>
+                                    <h3 class="card__description-header-title">Пейзаж с рыбой</h3>
+                                    <p class="card__description-headermaterial">Цветная литография (40×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>20 000 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
                     </ul>
                 </div>
                 <div 
@@ -227,7 +298,145 @@
                     tabindex="0"
                     data-js-tabs-content
                 >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, illo quo officiis minus expedita quaerat voluptatibus maiores repudiandae atque, officia quae qui ducimus ex, quos ea similique quibusdam sapiente voluptatem!
+                    <ul class="tabs__content-list container">
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/7.jpeg"
+                                    alt="Картина «Над городом» Курта Вернера"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Курт Вернер</p>
+                                    <h3 class="card__description-header-title">Над городом</h3>
+                                    <p class="card__description-header-material">Цветная литография (40×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>16 000 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/8.jpeg"
+                                    alt="Картина «Птенцы» Макса Рихтера"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Макс Рихтер</p>
+                                    <h3 class="card__description-header-title">Птенцы</h3>
+                                    <p class="card__description-header-material">Холст, масло (50×80)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>14 500 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/9.jpeg"
+                                    alt="Картина «Среди листьев» Мартина Майера"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Мартин Майер</p>
+                                    <h3 class="card__description-header-title">Среди листьев</h3>
+                                    <p class="card__description-header-material">Цветная литография (40×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>20 000 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/10.jpeg"
+                                    alt="Картина «Яркая птица» Германа Беккера"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Герман Беккер</p>
+                                    <h3 class="card__description-header-title">Яркая птица</h3>
+                                    <p class="card__description-header-material">Цветная литография (40×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>13 000 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/11.jpeg"
+                                    alt="Картина «Дятлы» Вульфа Бауэра"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Вульф Бауэр</p>
+                                    <h3 class="card__description-header-title">Дятлы</h3>
+                                    <p class="card__description-header-material">Бумага, акрил (50×80)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>20 000 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/12.jpeg"
+                                    alt="Картина «Большие воды» Вальтера Хартманна"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Вальтер Хартманн</p>
+                                    <h3 class="card__description-header-title">Большие воды</h3>
+                                    <p class="card__description-header-material">Бумага, акрил (50×80)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>23 000 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
                 </div>
                 <div 
                     class="tabs__content" 
@@ -236,11 +445,204 @@
                     tabindex="0"
                     data-js-tabs-content
                 >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, illo quo officiis minus expedita quaerat voluptatibus maiores repudiandae atque, officia quae qui ducimus ex, quos ea similique quibusdam sapiente voluptatem!
+                    <ul class="tabs__content-list container">
+                        <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/13.jpeg"
+                                    alt="Картина «Дикий зверь» Пол Смита"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Пол Смит</p>
+                                    <h3 class="card__description-header-title">Дикий зверь</h3>
+                                    <p class="card__description-header-material">Акварель, бумага (50×80)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>19 500 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
+                            <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/14.jpeg"
+                                    alt="Картина «Скалистый берег» Джона Уайта"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Джон Уайт</p>
+                                    <h3 class="card__description-header-title">Скалистый берег</h3>
+                                    <p class="card__description-header-material">Цветная литография (40×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>17 500 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
+                            <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/15.jpeg"
+                                    alt="Картина «Река и горы» Джона Уэстона"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Джон Уэстон</p>
+                                    <h3 class="card__description-header-title">Река и горы</h3>
+                                    <p class="card__description-header-material">Акварель, бумага (50×80)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>20 500 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
+                            <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/16.jpeg"
+                                    alt="Картина «Белый попугай» Юджина Зиллиона"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Юджин Зиллион</p>
+                                    <h3 class="card__description-header-title">Белый попугай</h3>
+                                    <p class="card__description-header-material">Цветная литография (40×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>15 500 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
+                            <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/17.jpeg"
+                                    alt="Картина «Ночная рыба» Эрика Гильмэна"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Эрик Гильмэн</p>
+                                    <h3 class="card__description-header-title">Ночная рыба</h3>
+                                    <p class="card__description-header-material">Бумага, акрил (50×80)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>12 500 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+
+                            <li class="tabs__content-list-item">
+                            <article class="card">
+                                <figure class="card__figure">
+                                <img
+                                    src="./images/18.jpeg"
+                                    alt="Картина «Рыжий кот» Альфреда Барра"
+                                    class="card__image"
+                                />
+                                </figure>
+                                <div class="card__description">
+                                <header class="card__description-header">
+                                    <p class="card__description-header-author description">Альфред Барр</p>
+                                    <h3 class="card__description-header-title">Рыжий кот</h3>
+                                    <p class="card__description-header-material">Цветная литография (40×60)</p>
+                                </header>
+                                <footer class="card__description-footer">
+                                    <p>21 000 руб</p>
+                                    <button class="card__button button">В корзину</button>
+                                </footer>
+                                </div>
+                            </article>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="ad">
+            <div class="ad__body container">
+                <div class="ad__body-description">
+                    <header class="ad__body-description-title">
+                        <img
+                        class="ad__image"
+                        src="./images/Star.png"
+                        alt="Новая коллекция французских авторов"
+                        width="80" height="80" loading="lazy">
+
+                        <h2 class="ad__title">Новая коллекция <br>французских авторов</h2>
+                    </header>
+                    <p class="ad__body-description-text">Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений.<br> 
+                    Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую востребованность направлений прогрессивного развития.</p>
+                </div>
+                <button class="button__accent">
+                    Ознакомиться
+                </button>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="team__main container">
+                <img
+                    class="team__main-image"
+                    src="images/team_image.png"
+                    alt="Голубь на ветке"
+                    width="540" height="621" loading="lazy">
+                <div class="team__body">
+                    <div class="team__body-description">
+                        <h2>Наша команда</h2>
+                        <p>Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.</p>
+                    </div>
+                    <div class="team__body-icons">
+                        <img
+                        class="team__body-icon"
+                        src="./images/team_1.png"
+                        alt="Сотрудник 1"
+                        width="80" height="80" loading="lazy">
+                        <img
+                        class="team__body-icon"
+                        src="./images/team_2.png"
+                        alt="Сотрудник 2"
+                        width="80" height="80" loading="lazy">
+                        <img
+                        class="team__body-icon"
+                        src="./images/team_3.png"
+                        alt="Сотрудник 3"
+                        width="80" height="80" loading="lazy">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer__inner container">
             <div class="footer__body">

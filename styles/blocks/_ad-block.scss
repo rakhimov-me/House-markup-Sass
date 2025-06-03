@@ -1,0 +1,71 @@
+@use '../helpers/' as *;
+
+.ad {
+    margin-bottom: rem(70);
+    background-image:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0.6) 0%,  /* слева – чёрный полупрозрачный */
+      rgba(0,0,0,0.0) 100% /* справа – прозрачный */
+    ),
+    url('../../images/back.jpeg');
+    background-size: cover;
+    background-position: top;
+    padding-block: rem(70);
+    
+    
+    &__body {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-items: flex-start;
+        gap: fluid(60, 30);
+
+        &-description {
+            display: flex;
+            flex-direction: column;
+            gap: rem(20);
+
+            &-title{
+                display: flex;
+                flex-direction: row;
+                gap: rem(20);
+                
+                .h2{
+                    color: white;
+                }
+            }
+
+            @include tablet-s-above {
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+.button__accent {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    border: rem(1) solid var(--color-accent);
+    padding: fluid(20, 10) fluid(60, 30);
+
+    @include tablet-s {
+        width: 100%;
+    }
+}
+
+.button__accent:hover {
+    background-color: var(#FAEB97);
+    color: var(--color-dark);
+    border: rem(1) solid #FAEB97;
+    
+}
+
+.ad__title {
+    color: white;
+}
+
+.ad__image {
+    width: fluid(80,50);
+    height: fluid(80,50);
+}

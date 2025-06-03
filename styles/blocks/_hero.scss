@@ -41,15 +41,15 @@
                 padding-inline: 0;
             }
 
-            &h1 {
+            h1 {
                 @include laptop {
-                    font-size: rem(40);
+                    font-size: rem(38);
                 }
                 @include tablet {
-                    width: rem(36);
+                    font-size: rem(32);
                 }
                 @include tablet-s {
-                    width: rem(30);
+                    font-size: rem(30);
                 }
             }
         }

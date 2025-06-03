@@ -4,15 +4,18 @@
 @use 'variables.scss';
 @use 'utils.scss';
 @use 'globals';
+
 @use './blocks/header.scss';
-@use './blocks/burger-button.scss';
 @use './blocks/footer.scss';
 @use './blocks/hero.scss';
-@use './blocks/basic-button.scss';
-@use './blocks/card.scss';
 @use './blocks/catalog-section.scss';
+@use './blocks/ad-block.scss';
+@use './blocks/team.scss';
 
-
+@use './elements/burger-button.scss';
+@use './elements/basic-button.scss';
+@use './elements/tabs-button.scss';
+@use './elements/card.scss';
 
 // header {
 //     display: none !important;
@@ -31,56 +34,6 @@
     color: var(--color-grey);
 }
 
-
-
-
-/**
-  CATALOG
- */
-
-/* .catalog {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.catalog--tabs{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 0;
-  width: 100%;
-}
-
-.catalog-navigation-list{
-  display: flex;
-  gap: 32px;
-}
-
-.catalog-navigation-button {
-  font-size: 20px;
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 25px;
-  background-color: var(--color-green-light);
-  border-radius: var(--border-radius);
-  border: 2px solid transparent;
-}
-
-.catalog-navigation-button:hover {
-  background-color: var(--color-green);
-  color: var(--color-light);
-}
-.catalog-navigation-button:active {
-  background-color: var(--color-green-light);
-  color: var(--color-dark);
-  border: 2px solid var(--color-green);
-}
-
-.catalog-navigation-button-active {
-  background-color: var(--color-green-active);
-  color: var(--color-light);
-} */
 
 
 

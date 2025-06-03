@@ -1,0 +1,45 @@
+@use '../helpers/' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-green-light);
+    padding: rem(20) rem(20) rem(30) rem(20);
+
+
+    &__description {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: fluid(20, 15);
+        gap: rem(30);
+
+        @include tablet {
+            gap: rem(11);
+        }
+
+        &-header {
+            &-title {
+                @include tablet {
+                    font-size: rem(22);
+                }
+            }
+        }
+
+        &-footer {
+            display: flex;
+            flex-direction: column;
+            gap: rem(20);
+            color: var(--color-green);
+
+            @include tablet {
+                gap: rem(10);
+            }
+        }
+    }
+    &__button {
+        width: 100%;
+        @include fluid-text(20, 18);
+    }
+}
